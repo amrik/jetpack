@@ -65,7 +65,7 @@ def jruby!(cmd)
 end
 
 def download(url, local_file)
-  x! "curl --silent --show-error -o #{local_file} #{url}"
+  x! "curl -k --silent --show-error -o #{local_file} #{url}"
 end
 
 def unzip(file, directory, pattern="")
